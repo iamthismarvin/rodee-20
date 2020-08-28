@@ -4,10 +4,11 @@
   <h4>A Friendly Dice Roll Discord Bot</h4>
 </div>
 
+**Rodee-20** is a Discord bot that helps you roll polyhedral dice by entering commands in the chat.
+
 ## Table of Contents
 
 - [Introduction](#Introduction)
-- [Description](#Description)
 - [List of Commands](#List-of-Commands)
 - [Available Dice](#Available-Dice)
 - [Notes](#Notes)
@@ -19,10 +20,6 @@ Rodee-20:
   Hello, I am Rodee-20!
   I can help you throw your dice. Just tell me what you need. :D
 ```
-
-## Description
-
-Rodee-20 is a Discord bot that helps you roll polyhedral dice in chat.
 
 ## List of Commands
 
