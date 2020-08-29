@@ -1,5 +1,6 @@
 require('dotenv').config();
 const Discord = require('discord.js');
+const commands = require('./commands.js');
 
 const client = new Discord.Client();
 const prefix = '!';
@@ -8,12 +9,23 @@ client.on('message', (message) => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
-  const commandBody = message.content.slice(prefix.length);
-  const args = commandBody.split(' ');
-  const command = args.shift().toLowerCase();
+  const content = message.content.slice(prefix.length);
 
-  if (command === 'rodee20') {
-    message.reply(`Hello, I am Rodee-20! A friendly dice roll discord bot.`);
+  switch (content) {
+    case 'rodee20 -g':
+      message.reply(commands.greeting());
+      break;
+    case 'rodee20 -h':
+      message.reply(commands.help());
+      break;
+    case 'rd20':
+      message.reply(commands.rd20());
+      break;
+    default: {
+      // ! DEBUGGING ONLY
+      // message.reply(`Unknown Command: \`${content}\``);
+      break;
+    }
   }
 });
 
