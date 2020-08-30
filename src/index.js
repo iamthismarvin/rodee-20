@@ -1,6 +1,7 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const commands = require('./commands.js');
+const parser = require('./parser.js');
 
 const client = new Discord.Client();
 const prefix = '!';
@@ -10,6 +11,14 @@ client.on('message', (message) => {
   if (!message.content.startsWith(prefix)) return;
 
   const content = message.content.slice(prefix.length);
+
+  const roll = parser.parser(content);
+
+  message.reply(
+    roll
+      ? `roll(s): ${roll.r}, dice: ${roll.d}, a|d: ${roll.ad}, bonus: ${roll.b}`
+      : 'Invalid command.',
+  );
 
   switch (content) {
     case 'rodee20 -g':
