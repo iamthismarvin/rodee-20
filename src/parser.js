@@ -8,12 +8,12 @@ const parser = (command) => {
 
   if (match) {
     const values = {
-      r: match[1],
-      d: match[2],
+      r: parseInt(match[1], 10),
+      d: parseInt(match[2], 10),
       ad: match[3],
-      b: match[4],
+      b: parseInt(match[4], 10),
     };
-    return `${values.r}, ${values.d}, ${values.ad}, ${values.b}`;
+    return commands.roll(values);
   }
   if (match2) {
     const value = match2[1];

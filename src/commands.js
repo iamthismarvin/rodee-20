@@ -1,3 +1,5 @@
+const utilities = require('./utilities.js');
+
 const greeting = () => {
   return `Hello, I am Rodee-20! A friendly dice roll discord bot.`;
 };
@@ -22,12 +24,29 @@ const help = () => {
 };
 
 const stat = () => {
-  return 'Your stat roll.';
+  const statRoll = [
+    utilities.singleRoll(6),
+    utilities.singleRoll(6),
+    utilities.singleRoll(6),
+    utilities.singleRoll(6),
+  ];
+  const statSort = [...statRoll].sort((a, b) => b - a).slice(0, 3);
+  const result = utilities.addDice(statSort);
+  return `Your stat roll is [**${statRoll[0]}**] [**${statRoll[1]}**] [**${statRoll[2]}**] [**${statRoll[3]}**] -> Result: [**${result}**].`;
 };
 
-const rd20 = () => {
-  const result = Math.floor(Math.random() * (20 - 1) + 1);
+const roll = (quantity, dice, ad, bonus) => {
+  let result = utilities.singleRoll(dice);
+  if (bonus) {
+    result += bonus;
+  }
+  // if (ad) {
+  //   switch (ad) {
+  //     case 'a':
+  //       return ``
+  //   }
+  // }
   return `rolled a [**${result}**].`;
 };
 
-module.exports = { greeting, help, stat, rd20 };
+module.exports = { greeting, help, roll, stat };
