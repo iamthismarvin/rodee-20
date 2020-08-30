@@ -1,6 +1,5 @@
 require('dotenv').config();
 const Discord = require('discord.js');
-const commands = require('./commands.js');
 const parser = require('./parser.js');
 
 const client = new Discord.Client();
@@ -14,27 +13,8 @@ client.on('message', (message) => {
 
   const roll = parser.parser(content);
 
-  message.reply(
-    roll
-      ? `roll(s): ${roll.r}, dice: ${roll.d}, a|d: ${roll.ad}, bonus: ${roll.b}`
-      : 'Invalid command.',
-  );
-
-  switch (content) {
-    case 'rodee20 -g':
-      message.reply(commands.greeting());
-      break;
-    case 'rodee20 -h':
-      message.reply(commands.help());
-      break;
-    case 'rd20':
-      message.reply(commands.rd20());
-      break;
-    default: {
-      // ! DEBUGGING ONLY
-      // message.reply(`Unknown Command: \`${content}\``);
-      break;
-    }
+  if (roll) {
+    message.reply(roll);
   }
 });
 

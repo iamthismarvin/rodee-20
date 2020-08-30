@@ -21,9 +21,13 @@ const help = () => {
   `;
 };
 
+const stat = () => {
+  return 'Your stat roll.';
+};
+
 const rd20 = () => {
   const result = Math.floor(Math.random() * (20 - 1) + 1);
   return `rolled a [**${result}**].`;
 };
 
-module.exports = { greeting, help, rd20 };
+module.exports = { greeting, help, stat, rd20 };
