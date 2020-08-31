@@ -32,7 +32,9 @@ const stat = () => {
   ];
   const statSort = [...statRoll].sort((a, b) => b - a).slice(0, 3);
   const result = utilities.addDice(statSort);
-  return `Your stat roll is [**${statRoll[0]}**] [**${statRoll[1]}**] [**${statRoll[2]}**] [**${statRoll[3]}**] -> Result: [**${result}**].`;
+  return `rolled for stat. \n**Roll:** ${utilities.textDice(
+    ...statRoll,
+  )} \n**Result:** [**${result}**].`;
 };
 
 const singleRoll = (dice, advantage, bonus) => {
