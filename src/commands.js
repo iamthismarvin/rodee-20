@@ -74,7 +74,7 @@ const multipleRoll = (quantity, dice, bonus) => {
     d.push(utilities.rollDice(dice));
     count += 1;
   }
-  const result = [...d].map((i) => i + bonus);
+  const result = [...d].map((i) => (bonus ? i + bonus : i));
   return `rolled ${quantity} d${dice}${bonus ? ` with ${bonus} bonus` : ''}.${
     bonus ? `\n**Before Bonus:** ${utilities.textDice(...d)}` : ''
   } \n**Result:** ${utilities.textDice(...result)}`;
