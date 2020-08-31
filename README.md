@@ -23,21 +23,21 @@ Rodee-20:
 
 ## List of Commands
 
-| Command             | Description                                                        | Example     | Outcome                                                           |
-| ------------------- | ------------------------------------------------------------------ | ----------- | ----------------------------------------------------------------- |
-| `!r1(d#)`           | Roll a dice once.                                                  | `!r1d20`    | `{USER} rolled a [20].`                                           |
-| `!r1(d#)a`          | Roll a dice with advantage.                                        | `!r1d20a`   | `{USER} rolled [8] [18] -> Result with advantage [18].`           |
-| `!r1(d#)d`          | Roll a dice with disadvantage.                                     | `!r1d20d`   | `{USER} rolled [9] [16] -> Result with disadvantage [9].`         |
-| `!r1(d#)(+/-)(#)`   | Roll a dice with bonus.                                            | `!r1d20+5`  | `{USER} rolled a [15]. -> Result with bonus [19].`                |
-| `!r1(d#)a(+/-)(#)`  | Roll a dice with advantage and bonus.                              | `!r1d20a-2` | `{USER} rolled [15] [12] -> Result with advantage [13].`          |
-| `!r1(d#)d(+/-)(#)`  | Roll a dice with disadvantage and bonus.                           | `!r1d20d+3` | `{USER} rolled [10] [4] -> Result with disadvantage [7].`         |
-| `!r(x)(d#)`         | Roll a dice multiple times.                                        | `!r2d8`     | `{USER} rolled [3] [7].`                                          |
-| `!r(x)(d#)(+/-)(#)` | Roll a dice multiple times with bonus.                             | `!r3d6-1`   | `{USER} rolled [1] [5] [3]. -> Result with bonus [0] [4] [2].`    |
-| `!rodee20 -h`       | Get list of commands available.                                    | N/A         | N/A                                                               |
-| `!rodee20 -s`       | Roll four d6 and take the top three results.                       | N/A         | `{USER} rolled [5] [1] [4] [5] -> Your stat is [14].`             |
-| `!rodee20 -ds`      | Roll a death saving throw. <sup><a href="#fr">fr</a></sup>         | N/A         | `{USER} rolled a [12]. Success: 2 <-> Failures: 1`                |
-| `!rodee20 -dsc`     | Get death saving throw counter. <sup><a href="#fr">fr</a></sup>    | N/A         | `{USER}'s Death Saving Throws are: Success: 0 <-> Failures: 0`    |
-| `!rodee20 -dsr`     | Resets death saving throw counter. <sup><a href="#fr">fr</a></sup> | N/A         | `Death Saving Throws have been reset. Success: 0 <-> Failures: 0` |
+| Command             | Description                                                        | Example     |
+| ------------------- | ------------------------------------------------------------------ | ----------- |
+| `!r1(d#)`           | Roll a dice once.                                                  | `!r1d20`    |
+| `!r1(d#)a`          | Roll a dice with advantage.                                        | `!r1d20a`   |
+| `!r1(d#)d`          | Roll a dice with disadvantage.                                     | `!r1d20d`   |
+| `!r1(d#)(+/-)(#)`   | Roll a dice with bonus.                                            | `!r1d20+5`  |
+| `!r1(d#)a(+/-)(#)`  | Roll a dice with advantage and bonus.                              | `!r1d20a-2` |
+| `!r1(d#)d(+/-)(#)`  | Roll a dice with disadvantage and bonus.                           | `!r1d20d+3` |
+| `!r(x)(d#)`         | Roll a dice multiple times.                                        | `!r2d8`     |
+| `!r(x)(d#)(+/-)(#)` | Roll a dice multiple times with bonus.                             | `!r3d6-1`   |
+| `!rodee20 -h`       | Get list of commands available.                                    | N/A         |
+| `!rodee20 -s`       | Roll four d6 and take the top three results.                       | N/A         |
+| `!rodee20 -ds`      | Roll a death saving throw. <sup><a href="#fr">fr</a></sup>         | N/A         |
+| `!rodee20 -dsc`     | Get death saving throw counter. <sup><a href="#fr">fr</a></sup>    | N/A         |
+| `!rodee20 -dsr`     | Resets death saving throw counter. <sup><a href="#fr">fr</a></sup> | N/A         |
 
 ## Available Dice
 
