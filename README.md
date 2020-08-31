@@ -47,7 +47,7 @@ Rodee-20:
 | d6        | 6 sides   | 1 to 6          |
 | d8        | 8 sides   | 1 to 8          |
 | d10       | 10 sides  | 0 to 9          |
-| d10t      | 10 sides  | 0, 20... 80, 90 |
+| d10t      | 10 sides  | 0, 10... 80, 90 |
 | d12       | 12 sides  | 1 to 12         |
 | d20       | 20 sides  | 1 to 20         |
 | d100      | 100 sides | 1 to 100        |
