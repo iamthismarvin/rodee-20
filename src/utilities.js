@@ -6,11 +6,15 @@ const addDice = (diceArray) => {
 };
 
 const rollDice = (dice) => {
-  const availableDice = [4, 6, 8, 10, 12, 20, 100];
-  if (availableDice.includes(dice)) {
-    return Math.floor(Math.random() * (dice - 1) + 1);
+  if (dice === 10) {
+    const result = Math.floor(Math.random() * 10 + 1);
+    return result === 10 ? 0 : result;
   }
-  return null;
+  if (dice === '10t') {
+    const result = Math.floor(Math.random() * 10 + 1) * 10;
+    return result === 100 ? 0 : result;
+  }
+  return Math.floor(Math.random() * dice + 1);
 };
 
 const textDice = (...rolls) => {
