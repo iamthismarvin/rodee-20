@@ -41,16 +41,16 @@ Rodee-20:
 
 ## Available Dice
 
-| Dice (d#) | Sides     | Outcome           |
-| --------- | --------- | ----------------- |
-| d4        | 4 sides   | 1 to 4            |
-| d6        | 6 sides   | 1 to 6            |
-| d8        | 8 sides   | 1 to 8            |
-| d10       | 10 sides  | 1 to 10           |
-| d10t      | 10 sides  | 10, 20... 90, 100 |
-| d12       | 12 sides  | 1 to 12           |
-| d20       | 20 sides  | 1 to 20           |
-| d100      | 100 sides | 1 to 100          |
+| Dice (d#) | Sides     | Outcome         |
+| --------- | --------- | --------------- |
+| d4        | 4 sides   | 1 to 4          |
+| d6        | 6 sides   | 1 to 6          |
+| d8        | 8 sides   | 1 to 8          |
+| d10       | 10 sides  | 0 to 9          |
+| d10t      | 10 sides  | 0, 20... 80, 90 |
+| d12       | 12 sides  | 1 to 12         |
+| d20       | 20 sides  | 1 to 20         |
+| d100      | 100 sides | 1 to 100        |
 
 ## Notes
 
