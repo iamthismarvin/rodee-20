@@ -21,4 +21,14 @@ const textDice = (...rolls) => {
   return text;
 };
 
-module.exports = { addDice, rollDice, textDice };
+const advantageTextDice = (d1, d2) => {
+  if (d1 > d2) {
+    return `[**${d1}**]~~[**${d2}**]~~`;
+  }
+  if (d1 < d2) {
+    return `~~[**${d1}**]~~[**${d2}**]`;
+  }
+  return `[**${d1}**][**${d2}**]`;
+};
+
+module.exports = { addDice, rollDice, textDice, advantageTextDice };

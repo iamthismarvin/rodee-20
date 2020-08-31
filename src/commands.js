@@ -35,27 +35,31 @@ const stat = () => {
   return `Your stat roll is [**${statRoll[0]}**] [**${statRoll[1]}**] [**${statRoll[2]}**] [**${statRoll[3]}**] -> Result: [**${result}**].`;
 };
 
-const singleRoll = (dice, ad, bonus) => {
+const singleRoll = (dice, advantage, bonus) => {
   const d = [utilities.rollDice(dice), utilities.rollDice(dice)];
   const result = { d1: d[0], d2: d[1] };
   if (bonus) {
     result.d1 += bonus;
     result.d2 += bonus;
   }
-  if (ad) {
-    if (ad === 'a') {
+  if (advantage) {
+    if (advantage === 'a') {
       return `rolled a d${dice} with advantage${
         bonus ? ` and ${bonus} bonus` : ''
       }.${
-        bonus ? `\n**Before Bonus:** ${utilities.textDice(d[0], d[1])}` : ''
-      } \n**Result:** ${utilities.textDice(result.d1, result.d2)}`;
+        bonus
+          ? `\n**Before Bonus:** ${utilities.advantageTextDice(d[0], d[1])}`
+          : ''
+      } \n**Result:** ${utilities.advantageTextDice(result.d1, result.d2)}`;
     }
-    if (ad === 'd') {
+    if (advantage === 'd') {
       return `rolled a d${dice} with disadvantage${
         bonus ? ` and ${bonus} bonus` : ''
       }.${
-        bonus ? `\n**Before Bonus:** ${utilities.textDice(d[0], d[1])}` : ''
-      } \n**Result:** ${utilities.textDice(result.d1, result.d2)}`;
+        bonus
+          ? `\n**Before Bonus:** ${utilities.advantageTextDice(d[0], d[1])}`
+          : ''
+      } \n**Result:** ${utilities.advantageTextDice(result.d1, result.d2)}`;
     }
   }
   return `rolled a d${dice}${bonus ? ` with ${bonus} bonus` : ''}.${
