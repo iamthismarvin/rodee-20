@@ -5,7 +5,7 @@ const addDice = (diceArray) => {
   return sum;
 };
 
-const singleRoll = (dice) => {
+const rollDice = (dice) => {
   const availableDice = [4, 6, 8, 10, 12, 20, 100];
   if (availableDice.includes(dice)) {
     return Math.floor(Math.random() * (dice - 1) + 1);
@@ -13,4 +13,12 @@ const singleRoll = (dice) => {
   return null;
 };
 
-module.exports = { addDice, singleRoll };
+const textDice = (...rolls) => {
+  let text = '';
+  rolls.forEach((roll) => {
+    text = text.concat(`[**${roll}**]`);
+  });
+  return text;
+};
+
+module.exports = { addDice, rollDice, textDice };
