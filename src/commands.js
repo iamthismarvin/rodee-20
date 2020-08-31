@@ -63,4 +63,17 @@ const singleRoll = (dice, ad, bonus) => {
   } \n**Result:** ${utilities.textDice(result.d1)}`;
 };
 
-module.exports = { greeting, help, singleRoll, stat };
+const multipleRoll = (quantity, dice, bonus) => {
+  const d = [];
+  let count = 0;
+  while (count < quantity) {
+    d.push(utilities.rollDice(dice));
+    count += 1;
+  }
+  const result = [...d].map((i) => i + bonus);
+  return `rolled ${quantity} d${dice}${bonus ? ` with ${bonus} bonus` : ''}.${
+    bonus ? `\n**Before Bonus:** ${utilities.textDice(...d)}` : ''
+  } \n**Result:** ${utilities.textDice(...result)}`;
+};
+
+module.exports = { greeting, help, stat, singleRoll, multipleRoll };

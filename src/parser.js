@@ -22,7 +22,7 @@ const parser = (command) => {
       b: parseInt(matchMultiple[3], 10),
     };
     if (matchMultiple !== 1) {
-      return commands.roll(values.r, values.d, values.b);
+      return commands.multipleRoll(values.r, values.d, values.b);
     }
   }
   if (matchCommand) {
